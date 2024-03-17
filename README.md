@@ -141,8 +141,8 @@ Use these files to complete the implementation:
 - Prime User credentials
 
   ```text
-   username: rahul
-   password: rahul@2021
+   username: lakshmi
+   password: lakshmi@2021
   ```
 
 - Non-Prime User credentials
