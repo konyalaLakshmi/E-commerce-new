@@ -33,21 +33,15 @@ class LoginForm extends Component {
     this.setState({showSubmitError: true, errorMsg})
   }
 
-  submitForm = async event => {
+   submitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
-    const userDetails = {username, password}
-    const url = 'https://apis.ccbp.in/login'
-    const options = {
-      method: 'POST',
-      body: JSON.stringify(userDetails),
-    }
-    const response = await fetch(url, options)
-    const data = await response.json()
-    if (response.ok === true) {
-      this.onSubmitSuccess(data.jwt_token)
+    if (username === 'lakshmi' && password === 'lakshmi@2021') {
+      // Simulate a successful login
+      this.onSubmitSuccess('dummy_jwt_token')
     } else {
-      this.onSubmitFailure(data.error_msg)
+      // Simulate a failed login
+      this.onSubmitFailure('Invalid username or password')
     }
   }
 
