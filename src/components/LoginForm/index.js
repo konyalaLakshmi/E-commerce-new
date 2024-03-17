@@ -33,7 +33,7 @@ class LoginForm extends Component {
     this.setState({showSubmitError: true, errorMsg})
   }
 
-   submitForm = async event => {
+  submitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
     if (username === 'lakshmi' && password === 'lakshmi@2021') {
